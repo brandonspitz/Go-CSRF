@@ -94,7 +94,7 @@ func logicHandler(w http.ResponseWriter, r *http.Request) {
 	switch r.URL.Path {
 	case "/restricted":
 		csrfSecret := grabCsrfFromRequest(r)
-		template.RenderTemplate(w, "restricted", &template.RestrictedPage{csrfSecret, "Hello Brandon"})
+		template.RenderTemplate(w, "restricted", &template.RestrictedPage{csrfSecret, "Hey there!"})
 	case "/login":
 		switch r.Method {
 		case "GET":
